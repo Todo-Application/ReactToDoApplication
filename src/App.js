@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
@@ -20,7 +22,7 @@ function App() {
       <div>
         <DarkModeToggle /> 
         <Routes>
-          <Route path="/login" element={<LoginForm />} />
+          <Route path="/" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />         
           <Route path="/user" element={<UserDashboard currentUser={auth.currentUser} />} />
           <Route path="/admin" element={<AdminDashboard />} />
